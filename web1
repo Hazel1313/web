@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Ghost Button</title>
+  <link rel="stylesheet" href="./style.css">
+ <style>
+  .button {
+    position: relative;
+    border: 2px solid #2e2e2e;
+    text-align: center;
+    padding: 20px 15px;
+    text-transform: uppercase; /* 小写字母转换成大写 */
+	  letter-spacing: 4px; /* 增加字符间距 */
+	  cursor: pointer; /* 光标呈现为指示链接的指针（一只手） */
+	width: 200px; /* 宽度 */
+   	height: 25px; /* 高度 */
+}
+
+
+
+.button a {
+	color: #969696; /* 内容颜色 */
+	font-family: 'Varela Round'; /* 字体 */
+	text-decoration: none; /* 否则会有难看的链接下划线 */
+
+}
+
+.button:hover {
+	border-color: #ffffff;
+}
+.button:hover a {
+    color: #ffffff;
+}
+.button:hover .shift {
+	padding-left: 10px;
+}
+
+body{
+background: -ms-linear-gradient(top, #200000 0%,  #600000 100%);        /* IE 10 */
+background: -moz-linear-gradient(top, #200000 0%,  #600000 100%);/*火狐*/ 
+background: webkit-gradient(top, #200000 0%,  #600000 100%);/*谷歌*/ 
+
+}
+
+
+
+ .mask {
+	background: rgba(255,255,255,0.5); /* 透明色 */
+	position: absolute;
+	width: 200px;
+	height: 25px;
+}
+
+
+
+
+ .mask {
+    transform: translate3d(-120%,-50px,0) rotate3d(0,0,1,45deg);
+}
+
+
+
+ .button:hover .mask {
+	background: #ffffff;
+	transform: translate3d(120%,-100px,0) rotate3d(0,0,1,90deg);
+}
+
+
+ .button .shift {
+	  transition: all 1.1s ease;
+}
+.button {
+    transition: border 1s ease, color .6s ease, background 3s ease;
+}
+
+ 
+
+ .mask {
+    transition: all 1.1s ease;
+}
+
+ 
+ 
+
+.button {
+	-webkit-transition: border 1s ease, color .6s ease, background 3s ease;
+    transition: border 1s ease, color .6s ease, background 3s ease;
+	overflow: hidden;
+	position:absolute;
+	left:50%;
+	margin-left:-100px;
+	top:50%;
+	margin-top:-12.5px;
+}
+
+
+
+</style>
+  
+</head>
+
+<body>
+ <div class="button">
+    <a href="http://muxistudio.com/">
+        MuxiStudio
+        <span> › </span>
+    </a>
+	<div class="mask"></div>
+</div>
+
+ 
+
+</body>
+</html>
+
